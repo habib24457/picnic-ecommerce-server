@@ -112,7 +112,7 @@ client.connect((err) => {
   //update
   app.put("/update/:id", (req, res) => {
     const updatedData = req.body;
-    const id = req.body.id;
+    const id = req.params.id;
     const query = { _id: ObjectId(id) };
     const options = { upsert: true };
     const updateDoc = {
